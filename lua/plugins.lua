@@ -17,6 +17,7 @@ return require('packer').startup(function()
 
 	-- lspconfig plugins
 	use 'neovim/nvim-lspconfig'
+	use 'b0o/SchemaStore.nvim'
 
 	-- rust plugins
 	use 'Saecki/crates.nvim'
@@ -56,4 +57,5 @@ return require('packer').startup(function()
 	use 'nvim-lualine/lualine.nvim'
 	use 'kyazdani42/nvim-web-devicons'
 	use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+	use 'p00f/nvim-ts-rainbow'
 end)

@@ -30,3 +30,23 @@ for _, lsp in ipairs(servers) do
 		}
 	}
 end
+
+nvim_lsp.jsonls.setup {
+	on_attach = on_attach,
+	capabilities = capabilities,
+	settings = {
+		json = {
+			schemas = {
+				{
+					fileMatch = { 'package.json' },
+					url = 'https://json.schemastore.org/package.json',
+				},
+				{
+					fileMatch = { 'tsconfig.json', 'tsconfig.*.json' },
+					url = 'http://json.schemastore.org/tsconfig',
+				},
+			},
+		},
+	},
+}
+

@@ -20,11 +20,4 @@ function M.browse_from_buffer()
 	})
 end
 
-function M.current_buffer_fzf()
-	require('telescope.builtin').current_buffer_fuzzy_find({
-		sorting_strategy = 'ascending',
-		prompt_position = "top"
-	})
-end
-
 return M
