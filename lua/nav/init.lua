@@ -1,2 +1,2 @@
-require('nav.bufferline')
 require('nav.telescope')
+require('nav.bufferline')

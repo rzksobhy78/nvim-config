@@ -39,11 +39,11 @@ nvim_lsp.jsonls.setup {
 			schemas = {
 				{
 					fileMatch = { 'package.json' },
-					url = 'https://json.schemastore.org/package.json',
+					url = '/home/sobhy/tools/package.json',
 				},
 				{
 					fileMatch = { 'tsconfig.json', 'tsconfig.*.json' },
-					url = 'http://json.schemastore.org/tsconfig',
+					url = '/home/sobhy/tools/tsconfig.json',
 				},
 			},
 		},

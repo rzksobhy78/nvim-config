@@ -4,8 +4,9 @@ local opts = { noremap = true, silent = true }
 require("bufferline").setup{
 	options = {
 		diagnostics = 'nvim_lsp',
-		show_close_icon = false
-	}
+		show_close_icon = false,
+		offsets = {{filetype = "NvimTree", text = "File Explorer" }},
+	},
 }
 
 set_keymap('n', '<TAB>', ':BufferLineCycleNext<CR>', opts)
