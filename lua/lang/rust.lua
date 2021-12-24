@@ -1,5 +1,5 @@
 -- Update this path
-local extension_path = '/home/sobhy/tools/lldb/extension/'
+local extension_path = '/home/sobhy/tools/codelldb/extension/'
 local codelldb_path = extension_path .. 'adapter/codelldb'
 local liblldb_path = extension_path .. 'lldb/lib/liblldb.so'
 

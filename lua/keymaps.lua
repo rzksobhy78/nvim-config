@@ -18,7 +18,8 @@ set_keymap('n', '<C-j>', '<C-w>j', opts)
 set_keymap('n', '<C-k>', '<C-w>k', opts)
 set_keymap('n', '<C-l>', '<C-w>l', opts)
 
-set_keymap('n', '/', ':Telescope current_buffer_fuzzy_find theme=ivy<CR>', opts)
+set_keymap('n', '<C-_>', ':Telescope current_buffer_fuzzy_find theme=ivy<CR>', opts)
+set_keymap('n', '<leader>/', ':nohl<CR>', opts)
 
 -- insert indention
 vim.api.nvim_command [[
