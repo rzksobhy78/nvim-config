@@ -31,10 +31,7 @@ vim.opt.writebackup = false
 vim.opt.encoding = 'utf-8'
 vim.opt.fileencoding = 'utf-8'
 vim.opt.clipboard = 'unnamedplus'
-vim.opt.fillchars = { eob = " ", vert = "▕" }
--- vim.opt.fillchars:append('vert:▕')
-vim.cmd[[ highlight NvimTreeVertSplit guifg=#24283b]]
-vim.cmd[[ highlight NvimTreeVertSplit guibg=#1f2335]]
+vim.opt.fillchars = { eob = " ", vert = " " }
 
 -- vim.g.sonokai_style = 'atlantis'
 -- vim.g.sonokai_enable_italic = 1

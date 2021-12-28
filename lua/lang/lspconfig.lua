@@ -1,4 +1,5 @@
 local nvim_lsp = require('lspconfig')
+local user = vim.fn.expand('$USER')
 
 local on_attach = function(client, bufnr)
 	local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
@@ -39,11 +40,11 @@ nvim_lsp.jsonls.setup {
 			schemas = {
 				{
 					fileMatch = { 'package.json' },
-					url = '/home/sobhy/tools/package.json',
+					url = '/home/' .. user .. '/.config/nvim/tools/package.json',
 				},
 				{
 					fileMatch = { 'tsconfig.json', 'tsconfig.*.json' },
-					url = '/home/sobhy/tools/tsconfig.json',
+					url = '/home/' .. user .. '/.config/nvim/tools/tsconfig.json',
 				},
 			},
 		},
