@@ -1,5 +1,6 @@
-vim.wo.number = true
-vim.wo.relativenumber = true
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.o.cursorline = true
 
 local tab_width = 4
 vim.opt.tabstop = tab_width
@@ -21,20 +22,23 @@ vim.api.nvim_command [[ set iskeyword +=- ]]
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
-vim.opt.updatetime = 300
-vim.opt.timeoutlen = 0
+vim.opt.updatetime = 250
+vim.opt.timeoutlen = 400
 vim.opt.termguicolors = true
 vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.writebackup = false
 vim.opt.encoding = 'utf-8'
 vim.opt.fileencoding = 'utf-8'
-vim.api.nvim_command [[
-	set clipboard+=unnamedplus
-]]
+vim.opt.clipboard = 'unnamedplus'
+-- vim.opt.fillchars = { eob = " ", vert = " " }
+vim.opt.fillchars:append('vert:▕')
+vim.cmd[[ highlight NvimTreeVertSplit guifg=#24283b]]
+vim.cmd[[ highlight NvimTreeVertSplit guibg=#1f2335]]
 
-vim.g.sonokai_style = 'atlantis'
-vim.g.sonokai_enable_italic = 1
-vim.g.sonokai_disable_italic_comment = 1
-vim.api.nvim_command [[ colorscheme sonokai ]]
+-- vim.g.sonokai_style = 'atlantis'
+-- vim.g.sonokai_enable_italic = 1
+-- vim.g.sonokai_disable_italic_comment = 1
+-- vim.api.nvim_command [[ colorscheme sonokai ]]
+vim.api.nvim_command [[ colorscheme tokyonight ]]
 vim.opt.background = 'dark'

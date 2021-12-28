@@ -4,6 +4,12 @@ return require('packer').startup(function()
 	-- Packer can manage itself
 	use 'wbthomason/packer.nvim'
 
+	-- tab line I use bufferline
+	use 'akinsho/bufferline.nvim'
+
+	-- file tree (Nvim-tree)
+	use 'kyazdani42/nvim-tree.lua'
+
 	-- Telescope plugins
 	use 'nvim-telescope/telescope.nvim'
 	use 'nvim-telescope/telescope-dap.nvim'
@@ -11,9 +17,6 @@ return require('packer').startup(function()
 	use 'nvim-telescope/telescope-file-browser.nvim'
 	use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 	use 'nvim-lua/plenary.nvim'
-
-	-- tab line I use bufferline
-	use 'akinsho/bufferline.nvim'
 
 	-- lspconfig plugins
 	use 'neovim/nvim-lspconfig'
@@ -47,14 +50,17 @@ return require('packer').startup(function()
 	use 'windwp/nvim-autopairs'
 	use 'numToStr/Comment.nvim'
 
+	-- status line
+	use 'nvim-lualine/lualine.nvim'
+
 	-- extra plugins
 	use 'folke/which-key.nvim'
 	use 'karb94/neoscroll.nvim'
 
 	-- appearance and syntax highlighting
 	use 'sainnhe/sonokai'
+	use 'folke/tokyonight.nvim'
 	use 'onsails/lspkind-nvim'
-	use 'nvim-lualine/lualine.nvim'
 	use 'kyazdani42/nvim-web-devicons'
 	use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 	use 'p00f/nvim-ts-rainbow'

@@ -3,9 +3,10 @@ local opts = { noremap = true, silent = true }
 
 require("bufferline").setup{
 	options = {
+		close_command = 'bwipeout! %d',
 		diagnostics = 'nvim_lsp',
 		show_close_icon = false,
-		offsets = {{filetype = "NvimTree", text = "File Explorer" }},
+		offsets = {{filetype = "NvimTree", text = "File Explorer", text_align = "left" }},
 	},
 }
 

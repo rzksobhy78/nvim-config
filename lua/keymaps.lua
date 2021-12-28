@@ -1,10 +1,7 @@
 local set_keymap = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
-set_keymap('n', '<SPACE>', '<NOP>', opts)
-vim.g.mapleader = ' '
-vim.g.globalmapleader = ' '
--- set_keymap('n', '<SPACE>', ':WhichKey <leader><CR>', opts)
+set_keymap('n', '<SPACE>', ':WhichKey <leader><CR>', opts)
 
 -- better escape
 set_keymap('i', '<C-c>', '<ESC>', opts)
@@ -51,6 +48,7 @@ require('which-key').register({
 			t = { ':lua require("telescope.builtin").colorscheme()<CR>', 'colorscheme' },
 		}
 	},
+	e = { ':NvimTreeToggle<CR>', 'FileTree' },
 	d = {
 		name = 'dap',
 		t = { ':lua require("dap").toggle_breakpoint()<CR>', 'toggle_breakpoint' },
