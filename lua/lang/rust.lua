@@ -1,7 +1,9 @@
-local user = vim.fn.expand('$USER')
+local home = os.getenv('HOME')
 
 -- Update this path
-local extension_path = '/home/' .. user .. '/.config/nvim/tools/lldb/extension/'
+local extension_path = home .. '/.config/nvim/tools/lldb/extension/'
+local codelldb_path = extension_path .. 'adapter/codelldb'
+local liblldb_path = extension_path .. 'lldb/lib/liblldb.so'
 
 local opts = {
 	dap = {

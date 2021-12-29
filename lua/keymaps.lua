@@ -15,14 +15,24 @@ set_keymap('n', '<C-j>', '<C-w>j', opts)
 set_keymap('n', '<C-k>', '<C-w>k', opts)
 set_keymap('n', '<C-l>', '<C-w>l', opts)
 
+-- search current buffer
+set_keymap('n', '?', ':nohl<CR>', opts)
 set_keymap('n', '<C-_>', ':Telescope current_buffer_fuzzy_find theme=ivy<CR>', opts)
-set_keymap('n', '<leader>/', ':nohl<CR>', opts)
 
--- insert indention
+-- btter tabbing
 vim.api.nvim_command [[
 	vnoremap < <gv
 	vnoremap > >gv
 ]]
+
+-- dap keymaps
+set_keymap('n', '<F4>', ':lua require("lang.custom").start_dap()<CR>', opts)
+set_keymap('n', '<F3>', ':lua require("lang.custom").close_dap()<CR>', opts)
+set_keymap('n', '<F5>', ':lua require("dap").continue()<CR>', opts)
+set_keymap('n', '<F9>', ':lua require("dap").toggle_breakpoint()<CR>', opts)
+set_keymap('n', '<F10>', ':lua require("dap").step_over()<CR>', opts)
+set_keymap('n', '<F11>', ':lua require("dap").step_into()<CR>', opts)
+set_keymap('n', '<F12>', ':lua require("dap").step_out()<CR>', opts)
 
 local leader_opts = {
 	mode = "n",
