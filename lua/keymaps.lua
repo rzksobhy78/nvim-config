@@ -49,7 +49,7 @@ require('which-key').register({
 			t = { ':lua require("telescope.builtin").colorscheme()<CR>', 'colorscheme' },
 		}
 	},
-	e = { ':lua require("nav.custom").toggle_tree()<CR>', 'FileTree' },
+	e = { ':NvimTreeToggle<CR>', 'File Explorer' },
 	d = {
 		name = 'dap',
 		t = { ':lua require("dap").toggle_breakpoint()<CR>', 'toggle_breakpoint' },

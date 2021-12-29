@@ -13,8 +13,9 @@ return packer.startup(function()
 	-- Packer can manage itself
 	use 'wbthomason/packer.nvim'
 
-	-- tab line (barbar)
-	use 'romgrk/barbar.nvim'
+	-- tab line (bufferline)
+	use 'akinsho/bufferline.nvim'
+	use 'famiu/bufdelete.nvim'
 
 	-- file tree (Nvim-tree)
 	use 'kyazdani42/nvim-tree.lua'
