@@ -30,7 +30,7 @@ return packer.startup(function()
 	use 'nvim-telescope/telescope-file-browser.nvim'
 	use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 
-	-- lspconfig plugins
+	-- lsp plugins
 	use 'neovim/nvim-lspconfig'
 	use 'b0o/SchemaStore.nvim'
 
@@ -41,6 +41,7 @@ return packer.startup(function()
 	-- cmp plugins
 	use 'hrsh7th/nvim-cmp'
 	use 'hrsh7th/cmp-nvim-lsp'
+	use 'hrsh7th/cmp-nvim-lua'
 	use 'hrsh7th/cmp-buffer'
 	use 'hrsh7th/cmp-path'
 	use 'hrsh7th/cmp-cmdline'

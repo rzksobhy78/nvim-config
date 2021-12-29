@@ -1,6 +1,8 @@
 local lspkind = require('lspkind')
 local cmp = require('cmp')
 
+vim.o.completeopt = 'menu,menuone,noselect'
+
 cmp.setup {
 	mapping = {
 		['<C-p>'] = cmp.mapping.select_prev_item(),
@@ -30,6 +32,7 @@ cmp.setup {
 	},
 
 	sources = {
+		{ name = "nvim_lua" },
 		{ name = "nvim_lsp" },
 		{ name = "path" },
 		{ name = "luasnip" },
@@ -49,6 +52,7 @@ cmp.setup {
 			with_text = true,
 			menu = {
 				nvim_lsp = "[LSP]",
+				nvim_lua = "[api]",
 				buffer = "[buf]",
 				path = "[path]",
 				luasnip = "[snip]",
