@@ -1,3 +1,3 @@
 require('nav.telescope')
-require('nav.bufferline')
+require('nav.barbar')
 require('nav.nvim-tree')

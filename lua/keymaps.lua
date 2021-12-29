@@ -40,6 +40,7 @@ require('which-key').register({
 		f = { ':lua require("nav.custom").search_src()<CR>', '< SRC >' },
 		a = { ':lua require("telescope.builtin").find_files()<CR>', 'All Files' },
 		t = { ':lua require("telescope.builtin").treesitter()<CR>', 'treesitter' },
+		b = { ':lua require("telescope.builtin").buffers()<CR>', 'buffers' },
 		c = {
 			name = 'Configurations',
 			f = { ':lua require("nav.custom").search_config()<CR>', '< CONFIG >' },
@@ -48,7 +49,7 @@ require('which-key').register({
 			t = { ':lua require("telescope.builtin").colorscheme()<CR>', 'colorscheme' },
 		}
 	},
-	e = { ':NvimTreeToggle<CR>', 'FileTree' },
+	e = { ':lua require("nav.custom").toggle_tree()<CR>', 'FileTree' },
 	d = {
 		name = 'dap',
 		t = { ':lua require("dap").toggle_breakpoint()<CR>', 'toggle_breakpoint' },

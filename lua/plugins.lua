@@ -1,22 +1,33 @@
+local packer = require('packer')
 local use = require('packer').use
 
-return require('packer').startup(function()
+packer.init {
+	display = {
+		open_fn = function()
+			return require("packer.util").float { border = "rounded" }
+		end,
+	},
+}
+
+return packer.startup(function()
 	-- Packer can manage itself
 	use 'wbthomason/packer.nvim'
 
-	-- tab line I use bufferline
-	use 'akinsho/bufferline.nvim'
+	-- tab line (barbar)
+	use 'romgrk/barbar.nvim'
 
 	-- file tree (Nvim-tree)
 	use 'kyazdani42/nvim-tree.lua'
 
 	-- Telescope plugins
-	use 'nvim-telescope/telescope.nvim'
+	use {
+		'nvim-telescope/telescope.nvim',
+		requires = { { 'nvim-lua/plenary.nvim' } }
+	}
 	use 'nvim-telescope/telescope-dap.nvim'
 	use 'nvim-telescope/telescope-ui-select.nvim'
 	use 'nvim-telescope/telescope-file-browser.nvim'
 	use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
-	use 'nvim-lua/plenary.nvim'
 
 	-- lspconfig plugins
 	use 'neovim/nvim-lspconfig'
@@ -39,7 +50,7 @@ return require('packer').startup(function()
 
 	-- snippets
 	use 'L3MON4D3/LuaSnip'
-	use 'rafamadriz/friendly-snippets'
+	use 'onsails/lspkind-nvim'
 
 	-- debugging
 	use 'mfussenegger/nvim-dap'
@@ -58,9 +69,7 @@ return require('packer').startup(function()
 	use 'karb94/neoscroll.nvim'
 
 	-- appearance and syntax highlighting
-	use 'sainnhe/sonokai'
 	use 'folke/tokyonight.nvim'
-	use 'onsails/lspkind-nvim'
 	use 'kyazdani42/nvim-web-devicons'
 	use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 	use 'p00f/nvim-ts-rainbow'
