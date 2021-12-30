@@ -34,6 +34,9 @@ set_keymap('n', '<F10>', ':lua require("dap").step_over()<CR>', opts)
 set_keymap('n', '<F11>', ':lua require("dap").step_into()<CR>', opts)
 set_keymap('n', '<F12>', ':lua require("dap").step_out()<CR>', opts)
 
+set_keymap('n', 'w', 'e', opts)
+set_keymap('n', 'e', ':NvimTreeFocus<CR>', opts)
+
 local leader_opts = {
 	mode = "n",
 	prefix = "<leader>",
